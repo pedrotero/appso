@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Software Ganaderia</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <% if(typeof log !== 'undefined'){%>
+        <%if(log){%>
+            <script>alert("Ingreso de datos exitoso")</script>
+        <%}else{%>
+            <script>alert("Error. Revise los datos ingresados")</script>
+        <%}%>       
+    <%}%>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <img src="https://img.icons8.com/cotton/64/000000/cow--v1.png"/>
+                </div>
+                <div class="sidebar-brand-text mx-3">GAN<sup>T&V</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/">
+                    <img src="https://img.icons8.com/ios/50/000000/cottage--v1.png" width="30" height="30"/>
+                    <span>Inicio</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Modificacion Animales
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesAñadirAnimal"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <img src="https://img.icons8.com/wired/64/000000/plus.png" width="30" height="30"/>
+                    <span>Añadir Animal</span>
+                </a>
+                <div id="collapsePagesAñadirAnimal" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        <a class="collapse-item" href="/AddVaca">Vaca</a>
+                        <a class="collapse-item" href="/AddToro">Toro</a>
+                        <a class="collapse-item" href="/AddCeba">Ceba</a>
+                        <a class="collapse-item" href="/AddCria">Cria</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="/DarBaja">
+                    <img src="https://img.icons8.com/wired/64/000000/poison.png" width="30" height="30" />
+                    <span>Dar de Baja</span></a>
+            </li>
+
+            
+            
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Ventas
+            </div>
+
+            
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="/VentaAnimal">
+                    <img src="https://img.icons8.com/pastel-glyph/64/000000/bull.png" width="30" height="30"/>
+                    <span>Animal</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/VentaPajilla">
+                    <img src="https://img.icons8.com/windows/32/000000/vial.png"/>
+                    <span>Pajilla</span></a>
+            </li>
+
+            
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Acciones Internas
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesSalud"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <img src="https://img.icons8.com/pastel-glyph/64/000000/health-report.png" width="30" height="30"/>
+                    <span>Salud</span>
+                </a>
+                <div id="collapsePagesSalud" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        <a class="collapse-item" href="/ReporteSalud">Crear Reporte Salud</a>
+                        <a class="collapse-item" href="/ReporteEmbarazo">Crear Reporte Embarazo</a>
+                        <a class="collapse-item" href="/Inseminar">Inseminar</a>
+                        <a class="collapse-item" href="/RegistrarVeterinario">Registrar Veterinario</a>
+                        <a class="collapse-item" href="/RegistrarVacuna">Registrar Vacuna</a>
+                        <a class="collapse-item" href="/RegistrarEnfermedad">Registrar Enfermedad</a>
+                        <a class="collapse-item" href="/AddPajilla">Añadir Pajilla</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="/CrearCliente">
+                    <img src="https://img.icons8.com/wired/50/000000/client-management.png" width="30" height="30"/>
+                    <span>Cliente</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/Reemplazo">
+                    <img src="https://img.icons8.com/pastel-glyph/64/000000/cow-breed.png" width="30" height="30"/>
+                    <span>Reemplazo Cria</span></a>
+            </li>
+
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesTablas"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <img src="https://img.icons8.com/wired/64/000000/grid.png" width="30" height="30"/>
+                    <span>Tablas</span>
+                </a>
+                <div id="collapsePagesTablas" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        <a class="collapse-item" href="/TablaBovino">Bovino</a>
+                        <a class="collapse-item" href="/TablaCliente">Cliente</a>
+                        <a class="collapse-item" href="/TablaEnfermedad">Enfermedad</a>
+                        <a class="collapse-item" href="/TablaInseminacion">Inseminacion</a>
+                        <a class="collapse-item" href="/TablaPajilla">Pajilla</a>
+                        <a class="collapse-item" href="/TablaReporteSalud">Reporte Salud</a>
+                        <a class="collapse-item" href="/TablaReporteEmbarazo">Reporte Embarazo</a>
+                        <a class="collapse-item" href="/TablaVacuna">Vacuna</a>
+                        <a class="collapse-item" href="/TablaVentaAnimal">Venta Animal</a>
+                        <a class="collapse-item" href="/TablaVentaPajilla">Venta Pajilla</a>
+                        <a class="collapse-item" href="/TablaVeterinario">Veterinario</a>
+                    </div>
+                </div>
+            </li>
+
+            
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <img src="/img/vaca.jpg" />
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+
+</body>
+
+</html>

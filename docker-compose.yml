@@ -1,0 +1,39 @@
+services:
+  db:
+    image: mysqlso
+    container_name: appso-db-1
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD="secret"
+    ports:
+      - 0.0.0.0:3306:3306
+    command: cp -f /data/my.cnf /etc/mysql/my.cnf
+    command: --init-file /data/init.sql
+    volumes:
+        - ./:/data
+    #healthcheck:
+        #test: curl -f localhost:3306 || exit 1
+        #interval: 30s
+        #timeout: 10s
+        #retries: 3
+        #start_period: 20s
+    networks:
+        static-network:
+            ipv4_address: 172.20.128.2
+  app:
+    image: nodeso
+    container_name: appso-app-1
+    ports:
+      - 3000:3000
+    depends_on:
+       - db
+    networks:
+      static-network:
+        ipv4_address: 172.20.128.3
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+          #docker-compose v3+ do not use ip_range
+          ip_range: 172.28.5.0/24
