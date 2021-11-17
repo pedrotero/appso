@@ -1,5 +1,6 @@
 # appso  
 #Aplicación de administración ganadera hecha en Docker Compose basada en node y MySQL  
+#Esta aplicación requiere tener instalado Docker Desktop para poder usar la herramienta Docker Compose
   
 #Comandos a ejecutar en shell para armar las images que usará la aplicación:   
 docker build -f SqlDocker ./ -t mysqlso   
