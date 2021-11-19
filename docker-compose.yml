@@ -1,6 +1,6 @@
 services:
   db:
-    image: mysqlso
+    image: mysql
     container_name: appso-db-1
     restart: unless-stopped
     environment:
@@ -21,7 +21,7 @@ services:
         static-network:
             ipv4_address: 172.20.128.2
   app:
-    image: nodeso
+    build: .
     container_name: appso-app-1
     restart: unless-stopped
     ports:
